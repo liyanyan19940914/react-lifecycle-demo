@@ -7,6 +7,9 @@ var Counter = React.createClass({
         this.setState({
             value: ++this.state.value
         });
+        if(this.state.value === 3){
+            ReactDOM.unmountComponentAtNode(document.getElementById('content'))
+        }
     },
     minus() {
         this.setState({
